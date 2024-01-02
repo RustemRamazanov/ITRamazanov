@@ -157,3 +157,20 @@ function readMore9(){
         more10.style.display="inline"
     }
     }
+
+let text='<!DOCTYPE html> <html lang="en"> <head> <meta charset="UTF-8"> <meta name="viewport" content="width=device-width, initial-scale=1.0"> <title>Document</title> </head> <body> </body> </html><body> <h1>Простая домашняя страница</h1> <h2>Раздел 1</h2> <p id="intro">Hello World!</p> <p class="sub-paragraph">Как твои дела?</p> <p class="sub-paragraph">Очень хорошо.</p> <h2>Раздел 2</h2> </body><body> <h1>Простая домашняя страница</h1> <h2>Раздел 1</h2> <p id="intro">Hello World!</p> <p class="sub-paragraph">Как твои дела?</p> <p class="sub-paragraph">Очень хорошо.</p> <h2>Раздел 2</h2> </body>'
+let p=document.querySelector('#text')
+let cursor = document.createElement('span')
+cursor.textContent='|'
+let text1=''
+let input=(i)=>{
+    setTimeout(()=>{
+        text1+=text[i]
+        p.textContent=text1
+        p.append(cursor)
+    },50*i)
+}
+
+for (let i=0; i< text.length-1; i++){
+    input(i)
+}
