@@ -7,33 +7,30 @@
     <title>Document</title>
 </head>
 <body>
-    <nav class="nav">
-        <section class="container">
-            <div class="title">
-                <p class="logo"> Рамазанов </p>
-                <ul class="nav-items">
-                    <li class="nav-item">
-                        <a href="#">Главная</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="#works">Портфолио</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="#stages">Этапы работы</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="#rezons">Преимущества</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="#contakt">Контакты</a>
-                    </li>
-                </ul>
-            </div>
-        </section>
-    </nav>
+    <div class="wrapper">
+            <header class="header">
+                <div class="logo">
+                    <span>ITRamazanov#</span>
+                </div>
+                <nav class="nav">
+                    <ul>
+                        <li><a href="#">Главная</a></li>
+                        <li><a href="#works">Портфолио</a></li>
+                        <li><a href="#stages">Этапы работы</a></li>
+                        <li><a href="#rezons">Преимущества</a></li>
+                        <li><a href="#contakt">Контакты</a></li>
+                    </ul>
+                </nav>
+
+                <!-- Иконка бургерменю -->
+                <div class="burger">
+                    <span></span>
+                </div>
+            </header>
+    </div>
     
     <section class="container">
-        <header class="header">
+        <header class="header-title">
             <div class="header-text">
                 <h1>Рамазанов Рустэм</h1>
                 <p>Качество и оперативность на проектах любой сложности. Верстаю сайты по макетам в Figma и Photoshop </p>
@@ -232,5 +229,11 @@
         </div>
     </section>
     <script src="scripts/script.js"></script>
+    <script>
+        document.querySelector('.burger').addEventListener('click', function() {
+            this.classList.toggle('active');
+            document.querySelector('.nav').classList.toggle('open');
+        })
+    </script>
 </body>
 </html>
