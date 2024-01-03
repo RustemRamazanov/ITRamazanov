@@ -158,19 +158,26 @@ function readMore9(){
     }
     }
 
-let text='<!DOCTYPE html> <html lang="en"> <head> <meta charset="UTF-8"> <meta name="viewport" content="width=device-width, initial-scale=1.0"> <title>Document</title> </head> <body> </body> </html><body> <h1>Простая домашняя страница</h1> <h2>Раздел 1</h2> <p id="intro">Hello World!</p> <p class="sub-paragraph">Как твои дела?</p> <p class="sub-paragraph">Очень хорошо.</p> <h2>Раздел 2</h2> </body><body> <h1>Простая домашняя страница</h1> <h2>Раздел 1</h2> <p id="intro">Hello World!</p> <p class="sub-paragraph">Как твои дела?</p> <p class="sub-paragraph">Очень хорошо.</p> <h2>Раздел 2</h2> </body>'
-let p=document.querySelector('#text')
-let cursor = document.createElement('span')
-cursor.textContent='|'
-let text1=''
-let input=(i)=>{
-    setTimeout(()=>{
-        text1+=text[i]
-        p.textContent=text1
-        p.append(cursor)
-    },50*i)
-}
+    const textEl = document.getElementById("box-text");
+    const text = '<!DOCTYPE html><html lang="en"> <head> <meta charset="UTF-8"> <meta name="viewport" content="width=device-width, initial-scale=1.0"> <title>Document</title> </head> <body> </body> </html><body> <h1>Простая домашняя страница</h1> <h2>Раздел 1</h2> <p id="intro">Hello World!</p> <p class="sub-paragraph">Как твои дела?</p> <p class="sub-paragraph">Очень хорошо.</p> <h2>Раздел 2</h2> </body><body> <h1>Простая домашняя страница</h1> <h2>Раздел 1</h2> <p id="intro">Hello World!</p> <p class="sub-paragraph">Как твои дела?</p> <p class="sub-paragraph">Очень хорошо.</p> <h2>Раздел 2</h2> </body>'
+    
+    let counter = 0;
+    let timer;
+    
+    function typeSymbol() {
+      textEl.insertAdjacentText("beforeend", text[counter]);
+      clearTimeout(timer);
+      counter++;
+      if (counter <= text.length)
+        timer = setTimeout(typeSymbol, Math.random() * 50 + 50);
+    }
+    
+    typeSymbol();
+    
+    document.getElementById("box").addEventListener("click", () => {
+      counter = 0;
+      textEl.textContent = "";
+    })
 
-for (let i=0; i< text.length-1; i++){
-    input(i)
-}
+
+

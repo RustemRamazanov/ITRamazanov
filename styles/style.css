@@ -206,8 +206,6 @@ p{
 }
 
 .box-text{
-	padding: 0;
-	margin: 0;
 	color: #0226CC;
 	font-feature-settings: 'clig' off, 'liga' off;
 	font-family: Inter;
@@ -257,12 +255,19 @@ p{
 .cards h3{
     margin-top: 10px;
     margin-bottom: 10px;
+    color: #828282;
+}
+.cards a{
+   text-decoration: none;
+}
+.cards-big p{
+    width: 100%;
 }
 
 .scale {
     display: inline-block; /* Строчно-блочный элемент */
     overflow: hidden; /* Скрываем всё за контуром */
-    background-color: #0226CC;
+    background-color:  #828282;
    }
    .scale img {
     transition: 1s; /* Время эффекта */
@@ -338,8 +343,7 @@ p{
     width: 600px;
     padding: 33px;
     height: 454px;
-    
-    
+    color: pointer;
 }
 .ramka{
     width: 100%;
