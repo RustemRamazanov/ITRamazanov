@@ -159,7 +159,7 @@ function readMore9(){
     }
 
     const textEl = document.getElementById("box-text");
-    const text = '<!DOCTYPE html><html lang="en"> <head> <meta charset="UTF-8"> <meta name="viewport" content="width=device-width, initial-scale=1.0"> <title>Document</title> </head> <body> </body> </html><body> <h1>Простая домашняя страница</h1> <h2>Раздел 1</h2> <p id="intro">Hello World!</p> <p class="sub-paragraph">Как твои дела?</p> <p class="sub-paragraph">Очень хорошо.</p> <h2>Раздел 2</h2> </body><body> <h1>Простая домашняя страница</h1> <h2>Раздел 1</h2> <p id="intro">Hello World!</p> <p class="sub-paragraph">Как твои дела?</p> <p class="sub-paragraph">Очень хорошо.</p> <h2>Раздел 2</h2> </body>'
+    const text = '<!DOCTYPE html><html lang="en"> <head> <meta charset="UTF-8"> <meta name="viewport" content="width=device-width, initial-scale=1.0"> <title>Document</title> </head> <body> </body> </html><body> <h1>Простая домашняя страница</h1> <h2>Раздел 1</h2> <p id="intro">Hello World!</p> <p class="sub-paragraph">Как твои дела?</p> <p class="sub-paragraph">Очень хорошо.</p> <h2>Раздел 2</h2> </body><body> <h1>Простая домашняя страница</h1> <h2>Раздел 1</h2> <p id="intro">Hello World!</p> <p class="sub-paragraph">'
     
     let counter = 0;
     let timer;
