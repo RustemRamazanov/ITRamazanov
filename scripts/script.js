@@ -159,8 +159,8 @@ function readMore9(){
     }
 
     const textEl = document.getElementById("box-text");
-    const text = '<!DOCTYPE html><html lang="en"> <head> <meta charset="UTF-8"> <meta name="viewport" content="width=device-width, initial-scale=1.0"> <title>Document</title> </head> <body> </body> </html><body> <h1>Простая домашняя страница</h1> <h2>Раздел 1</h2> <p id="intro">Hello World!</p> <p class="sub-paragraph">Как твои дела?</p> <p class="sub-paragraph">Очень хорошо.</p> <h2>Раздел 2</h2> </body><body> <h1>Простая домашняя страница</h1> <h2>Раздел 1</h2> <p id="intro">Hello World!</p> <p class="sub-paragraph">'
-    
+    const text = '<<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><link rel="stylesheet" href="styles/style.css"><title>Document</title></head><body><div class="wrapper"><header class="header"><div class="logo"><span>ITRamazanov#</span></div><nav class="nav"><ul><li><a href="#">Главная</a></li><li><a href="#works">Портфолио</a></li><li><a href="#stages">Этапы работы</a></li><li><a href="#rezons">'
+
     let counter = 0;
     let timer;
     
